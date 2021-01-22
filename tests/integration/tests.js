@@ -26,4 +26,15 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('5')
   })
 
+
+  // 7 subtract 4 equals 3
+  it('should be able to subract a number from another', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('3')
+  })
+
 });
