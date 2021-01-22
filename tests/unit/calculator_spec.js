@@ -36,4 +36,10 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3);
   })
 
+  it('it can take/concatenate multiple button clicks', function(){
+    calculator.previousTotal = 1;
+    calculator.numberClick(75);
+    assert.strictEqual(calculator.runningTotal, 75);
+  })
+
 });
