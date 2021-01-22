@@ -42,4 +42,11 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 75);
   })
 
+  it('it can chain multiple operations together', function(){
+    calculator.operatorClick('+');
+    assert.strictEqual(calculator.previousTotal, 0);
+    assert.strictEqual(calculator.newTotal, true);
+
+  })
+
 });
