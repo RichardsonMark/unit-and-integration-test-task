@@ -26,7 +26,6 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('5')
   })
 
-
   // 7 subtract 4 equals 3
   it('should be able to subract a number from another', function(){
     running_total = element(by.css('#running_total'))
@@ -35,6 +34,16 @@ describe('calculator functionality', function() {
     element(by.css('#number4')).click();
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('3')
+  })
+
+  // 3 multiplied by 5 equals 15
+  it('should be able to multiply a number by another', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('15')
   })
 
 });
